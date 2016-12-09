@@ -70,8 +70,8 @@ function standartDate(anyDay){// this function normalize string date into a Date
     
     var anyDATE = new Date();
         anyDATE.setFullYear(anyDayA[2]);// A means Array
-        anyDATE.setMonth(anyDayA[1]-1);// we have months in range of 0...11
-        anyDATE.setDate(anyDayA[0]);// anyDATE is in a correct format
+        anyDATE.setMonth(anyDayA[0]-1);// we have months in range of 0...11
+        anyDATE.setDate(anyDayA[1]);// anyDATE is in a correct format
 
     
     return anyDATE;
@@ -944,9 +944,15 @@ function runweeklyOneAndThree(startDate, finishDate){// global function runs tra
 
 /*--------------------- this three functions run three periods of transactions - month, year, week -----------------*/
 
-runMonthlyOneAndTwice("1/1/2010", "25/11/2016");//start date and final date - in my task 2016
+function run(startdata, finishdata){
 
-runYearlyThreeAndSix("1/1/2010", "25/101/2016");//start date and final date - in my task 2016
+runMonthlyOneAndTwice(startdata, finishdata);//start date and final date - in my task 2016
 
-runweeklyOneAndThree("1/1/2010", "25/11/2016");//start date and final date - in my task 2016
+runYearlyThreeAndSix(startdata, finishdata);//start date and final date - in my task 2016
+
+runweeklyOneAndThree(startdata, finishdata);//start date and final date - in my task 2016
+}
+
+
+run("1/1/2010", "11/25/2016");// we use format m/d/yyyy
 
