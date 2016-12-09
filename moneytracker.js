@@ -918,7 +918,7 @@ function runweeklyOneAndThree(startDate, finishDate){// global function runs tra
     
     var lastTimeDay = startTimeDay + WEEK - 1;// first week - we count it from the begining of the zero point
 
-    makeWeeklyTransactions(startTimeDay, lastTimeDay);
+    //makeWeeklyTransactions(startTimeDay, lastTimeDay);
     makeWeeklyTransactionsTriple(startTimeDay, lastTimeDay);// we call this functions for the 1-st week
     
     var zTimeDay = lastTimeDay + 1;//the first day of the next week
@@ -930,7 +930,7 @@ function runweeklyOneAndThree(startDate, finishDate){// global function runs tra
         cycleTimeDayFinish = cycleTimeDayStart + WEEK - 1;// last day of the next week
 
         if(cycleTimeDayFinish <= finishTimeDay){
-            makeWeeklyTransactions(cycleTimeDayStart, cycleTimeDayFinish);
+            //makeWeeklyTransactions(cycleTimeDayStart, cycleTimeDayFinish);
             makeWeeklyTransactionsTriple(cycleTimeDayStart, cycleTimeDayFinish);
             // we are in a full-time week
             // we ignore short last week
@@ -946,9 +946,9 @@ function runweeklyOneAndThree(startDate, finishDate){// global function runs tra
 
 function run(startdata, finishdata){
 
-runMonthlyOneAndTwice(startdata, finishdata);//start date and final date - in my task 2016
+//runMonthlyOneAndTwice(startdata, finishdata);//start date and final date - in my task 2016
 
-runYearlyThreeAndSix(startdata, finishdata);//start date and final date - in my task 2016
+//runYearlyThreeAndSix(startdata, finishdata);//start date and final date - in my task 2016
 
 runweeklyOneAndThree(startdata, finishdata);//start date and final date - in my task 2016
 }
